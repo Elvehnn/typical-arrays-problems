@@ -1,7 +1,6 @@
 
 exports.min = function min (array) {
   if (!Array.isArray(array) || !array.length) {
-    alert (array, array.length)
     return 0;
    } else {
       let minElement = array[0];
@@ -17,12 +16,11 @@ exports.min = function min (array) {
 
 exports.max = function max (array) {
   if (!Array.isArray(array) || !array.length) {
-    alert (array, array.length)
     return 0;
    } else {
       let maxElement = array[0];
       for (let i = 1; i < array.length; i++) {
-        if (array[i] < maxElement) {
+        if (array[i] > maxElement) {
           maxElement = array[i];
           }
       }
@@ -32,15 +30,13 @@ exports.max = function max (array) {
 
 exports.avg = function avg (array) {
   if (!Array.isArray(array) || !array.length) {
-    alert (array, array.length)
     return 0;
    } else {
-      let minElement = array[0];
-      for (let i = 1; i < array.length; i++) {
-        if (array[i] < minElement) {
-          minElement = array[i];
-          }
+      let averageArray = 0;
+      for (let i = 0; i < array.length; i++) {
+        averageArray += array[i];
+         
       }
-      return minElement;
+      return (averageArray/array.length);
   }
 }
